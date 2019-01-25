@@ -1,0 +1,25 @@
+.header {
+    background-color: rgb(238, 238, 238);
+    padding: 15px;
+}
+
+.accounts {
+    display: grid;
+    grid-template-columns: 20% 10% auto;
+    padding: 5px 10px;
+}
+
+.button-edit {
+    width: 150px;
+}
+
+.button-container {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.accounts-container {
+    width: 70%;
+    border: 1px solid lightgray;
+    margin: 50px auto auto;
+}

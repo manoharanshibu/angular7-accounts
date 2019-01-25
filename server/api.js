@@ -11,7 +11,13 @@ app.get('/api/getaccounts', function(req, res) {
 
     res.send({ data: [
       {name: 'Shibu', dob: '22/05/1978'},
-      {name: 'Rejitha', dob: '22/05/1978'}
+      {name: 'Rejitha', dob: '22/05/1988'},
+      {name: 'Kanz', dob: '22/05/2011'},
+      {name: 'Kanishk', dob: '22/05/2007'},
+      {name: 'Shibu Manoharan', dob: '22/05/1978'},
+      {name: 'Rejitha Shibu', dob: '22/05/1988'},
+      {name: 'Kanz Shibu', dob: '22/05/2011'},
+      {name: 'Kanishk Shibu', dob: '22/05/2007'}
     ]
     });
 });
