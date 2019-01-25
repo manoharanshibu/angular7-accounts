@@ -1,0 +1,9 @@
+<h1>Edit Accounts</h1>
+<div class="container">
+  <div *ngIf="accounts">
+    <div class="accounts" *ngFor="let account of accounts">
+      <div>{{ account.name }}</div>
+      <div>{{ account.dob }}</div>
+    </div>
+  </div>
+</div>
