@@ -4,8 +4,12 @@
     <div class="accounts" *ngFor="let account of accounts">
       <div>{{ account.name }}</div>
       <div>{{ account.dob }}</div>
-      <div class="button-container"><button class="button-edit">Edit</button></div>
-      
+      <div class="button-container">
+        <button class="button-edit" (click)="showDialog = !showDialog">Edit</button>
+      </div>
     </div>
   </div>
 </div>
+
+<app-edit-dialog [(visible)]="showDialog">
+</app-edit-dialog>

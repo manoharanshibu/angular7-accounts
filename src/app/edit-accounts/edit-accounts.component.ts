@@ -10,6 +10,7 @@ import { ArrayType } from '@angular/compiler/src/output/output_ast';
 export class EditAccountsComponent implements OnInit {
 
   accounts: Array<Object>;
+  showDialog: false;
 
   constructor(private data: DataService) {
       this.data.getAccounts().subscribe( (res) => {

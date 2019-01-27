@@ -1,0 +1,12 @@
+<div [@dialog] *ngIf="visible" class="dialog">
+    <button *ngIf="closable" (click)="close()" aria-label="Close" class="dialog__close-btn">X</button>        
+  <ng-content></ng-content>
+      <div class="dialog-header">
+          Edit Account Details
+      </div>
+  
+  <button (click)="showDialog = !showDialog" class="btn">Submit</button>
+  <button (click)="showDialog = !showDialog" class="btn">Cancel</button>
+</div>
+
+<div *ngIf="visible" class="overlay" (click)="close()"></div>
