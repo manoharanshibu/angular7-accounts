@@ -4,49 +4,47 @@
     <div class="dialog-header">
         Edit Account Details
     </div>
-    
   <div>
       <form [formGroup]="accountForm" (ngSubmit)="onSubmit()">
           <div class="form-name">
               <label>Full Name*</label><br/>
-              <input type="text" formControlName="fullName" [ngClass]="{ 'is-invalid': submitted && formControls.fullName.errors }" />
-              <div *ngIf="submitted && accountForm.fullName.errors" class="invalid-feedback">
-                  <div *ngIf="formControls.fullName.errors.required">Full Name is required</div>
+              <input type="text" formControlName="fullName" [(ngModel)]="selectedItem.name" [ngClass]="{ 'is-invalid': submitted && formControls.fullName.errors }" />
+              <div *ngIf="submitted && accountForm.controls.fullName.errors" class="invalid">
+                  <div *ngIf="accountForm.controls.fullName.errors.required">Full Name is required</div>
               </div>
           </div>
+
           <div class="form-dob">
               <label>Date of birth*</label><br/>
               <div class="dob-container">
                 <div class="dob-item">
                     <label>Day*</label><br/>
-                    <select formControlName="dob" >
+                    <select formControlName="dobDay" [(ngModel)]="selectedItem.day">
                         <option *ngFor="let option of optionsDay">{{ option }}</option>
                     </select>
                 </div>
                 <div class="dob-item">
                     <label>Month*</label><br/>
-                    <select formControlName="dob" >
+                    <select formControlName="dobMonth" >
                         <option *ngFor="let option of optionsMonth">{{ option }}</option>
                     </select>
                 </div>
                 <div class="dob-item">
                     <label>Year*</label><br/>
-                    <select formControlName="dob" >
+                    <select formControlName="dobYear" >
                         <option *ngFor="let option of optionsYear">{{ option }}</option>
                     </select>
                 </div>
               </div>
-              <div *ngIf="submitted && accountForm.dob.errors" class="invalid-feedback">
-              <div *ngIf="formControls.lastName.errors.required">Date of Birth is required</div>
-              </div>
           </div>
+          <div class="button-container">
+              <button type="submit" class="btn">Submit</button>&nbsp;&nbsp;&nbsp;
+              <button class="btn">Cancel</button>
+            </div>
       </form>
 </div>
 
-  <div class="button-container">
-    <button (click)="onSubmit();showDialog = !showDialog" class="btn">Submit</button>&nbsp;&nbsp;&nbsp;
-    <button (click)="showDialog = !showDialog" class="btn">Cancel</button>
-  </div>
+
   <div class="required"> 
       * required
   </div>

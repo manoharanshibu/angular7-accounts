@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { EditAccountsComponent } from './edit-accounts/edit-accounts.component';
 import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
