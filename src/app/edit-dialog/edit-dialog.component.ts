@@ -59,15 +59,14 @@ export class EditDialogComponent implements OnInit {
     if (this.formControls.fullName.invalid) {
         return;
     }
-
-    this.accountForm.reset();
     
     this.visible = false;
 }
 
   close() {
+    this.submitted = false;
+    
     this.visible = false;
-    this.accountForm.reset();
     this.visibleChange.emit(this.visible);
   }
 
