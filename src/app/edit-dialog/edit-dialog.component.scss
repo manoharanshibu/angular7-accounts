@@ -19,7 +19,7 @@
     margin-left: auto;
     min-height: 200px;
     width: 90%;
-    max-width: 520px;
+    max-width: 820px;
     background-color: #fff;
     box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
   }
@@ -38,8 +38,8 @@
     font-size: 1.2em;
     position: relative;
     float: right;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
   }
 
   .dialog-header {
@@ -49,4 +49,41 @@
     height: 40px;
     color: white;
     padding-top: 20px;
+}
+
+.form-name {
+  width: 80%;
+  border: 1px solid lightgray;
+  margin: 10px auto auto;
+  padding: 20px;
+}
+
+.form-dob {
+  width: 40%;
+  border: 1px solid lightgray;
+  margin: 20px auto 20px 7.5%;
+  padding: 20px;
+}
+
+.dob-container {
+  display: flex;
+  padding: 10px;
+}
+
+.dob-item {
+  margin: 5px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.required {
+  display: block;
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
 }
